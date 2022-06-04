@@ -1,0 +1,28 @@
+/* Style the navbar */
+.logo-container {
+    position: sticky;
+    display: block;
+ 
+}
+
+ .navbar li {
+    margin-left : 1em;
+    margin-right : 1em;
+    white-space: nowrap;
+}
+.container{
+    padding: 2vh;
+    margin: 2vh;
+}
+
+@media all and (max-width:720px){
+    
+    nav{
+        width: 100%;
+    }
+    li{
+        display: block;
+        text-align: center;
+    }
+    
+}

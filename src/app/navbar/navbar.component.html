@@ -1,0 +1,41 @@
+
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home">Home</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="basicNav.toggle()"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav"
+      mdbCollapse
+      #basicNav="mdbCollapse"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-center active" aria-current="page" href="/bookin">Book now</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link text-center" href="/location">Where are we</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center" href="/contact">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center" href="/calendar">Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center" href="/pricelist">Price</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
