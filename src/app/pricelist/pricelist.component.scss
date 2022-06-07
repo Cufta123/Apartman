@@ -1,0 +1,28 @@
+.container{
+    
+ padding: 2%;
+ margin: 0;
+ ;
+}
+.h2{
+    text-align: center;
+    
+    
+}
+img{
+    max-width: 622px;
+    display: block;
+    margin: 2%;
+    width: 50%;
+}
+
+.rezervacije{
+    max-width: 50%;
+    margin: 0 5%;
+}
+
+@media all and(max-width:991px){
+    .rezervacije{
+        max-width: 80%;
+    }
+}
