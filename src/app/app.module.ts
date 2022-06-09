@@ -20,14 +20,18 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { TranslateModule,TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MaskImageComponent } from './mask-image/mask-image.component';
 import { FooterComponent } from './footer/footer.component';
 
 
 
-
+export function HttpLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http);
+}
 
 
 @NgModule({
@@ -37,10 +41,21 @@ import { FooterComponent } from './footer/footer.component';
     MaskImageComponent,
     FooterComponent,
     routingComponents,
+
   ],
   imports: [
-
     BrowserModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+
+        }
+      
+    }),
+    
     AppRoutingModule,
     MdbAccordionModule,
     MdbCarouselModule,

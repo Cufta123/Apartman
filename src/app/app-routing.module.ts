@@ -16,7 +16,7 @@ const routes: Routes = [
   {path:'about',component:LocationComponent},
   {path:'calendar',component:CalendarComponent},
   {path:'pricelist',component:PricelistComponent},
-  {path:'galery',component:GalleryComponent}
+  {path:'gallery',component:GalleryComponent}
 ];
 
 @NgModule({
