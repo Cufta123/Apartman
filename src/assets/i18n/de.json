@@ -1,6 +1,15 @@
 {"HOME":{
-    "TITLE":"Hallo angular",
-    "SELECT":"Biite selektaj",
-    "TEXT":"cao"
-    }
+    "TITLE":"Apartman luksic",
+    "SELECT":"Sprache auswählen",
+    "TITLE1":"Inhalt der Wohnung",
+    "TEXT1":"Die Wohnung der Familie Luksic befindet sich im Zentrum der kleinen Küstenstadt Volosko. Volosko liegt am Meer, 1,5 km von Opatija entfernt und hat den Geist eines alten Fischerdorfes mit zahlreichen Restaurants, Cafés und Kunstgalerien bewahrt. Steile und schmale Gassen führen zum malerischen Hafen, entlang dem die Promenade verläuft.",
+    "TEXT2":"Die Wohnung befindet sich im 1. Stock eines Hauses im Zentrum von Volosko. Es besteht aus einer Küche mit Essbereich, einem Wohnzimmer mit zwei Zustellbetten, zwei Doppelzimmern und einem Badezimmer mit einer Gesamtfläche von 65 m2. Alle Zimmer sind klimatisiert. Die Wohnung verfügt über einen Geschirrspüler, eine Waschmaschine, eine Mikrowelle und eine Küche mit allen notwendigen Elementen, Geschirr und Besteck. Die Wohnung hat einen separaten Eingang und einen Südbalkon. Die Entfernung zum Meer beträgt ca. 80 m Luftlinie. Direkt neben dem Haus befindet sich ein Geschäft, die Post ist 150 m entfernt, eine Bäckerei ist 100 m entfernt und alle anderen Einrichtungen sind in der Nähe."
+    },
+
+    "LOCATION":{
+        "TITLE":"Ich bin Voloscan"
+            }
+        
+    
+    
 }
