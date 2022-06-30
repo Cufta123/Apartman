@@ -41,4 +41,17 @@
       
     </div>
   </div>
+
+    <button
+      mat-menu-item
+      *ngFor="let lang of appLanguages"
+      (click)="changeLanguage(lang)"
+      [ngClass]="{
+        'mat-bg-primary-mid mat-color-primary-mid-contrast':
+          lang === (currentLanguage | async)
+      }"
+    >
+      {{ lang | uppercase }}
+    </button>
+
 </nav>

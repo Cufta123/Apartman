@@ -1,22 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BookinComponent } from './bookin/bookin.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { LocationComponent } from './location/location.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { GalleryComponent } from './gallery/gallery.component';
-import { PricelistComponent } from './pricelist/pricelist.component';
+import { APP_ROUTES } from './services/routes.config';
 const routes: Routes = [
-  {path:'contact',component: ContactComponent},
-  {path:'bookin',component: BookinComponent},
-  {path:'home',component:HomeComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: '**', redirectTo: 'not-found'},
-  {path:'about',component:LocationComponent},
-  {path:'calendar',component:CalendarComponent},
-  {path:'pricelist',component:PricelistComponent},
-  {path:'gallery',component:GalleryComponent}
+  { path: APP_ROUTES.HOME.url, component: APP_ROUTES.HOME.component },
+  { path: APP_ROUTES.ABOUT.url, component: APP_ROUTES.ABOUT.component },
+  
+  { path: APP_ROUTES.BOOKING.url, component: APP_ROUTES.BOOKING.component },
+  { path: APP_ROUTES.CALENDAR.url, component: APP_ROUTES.CALENDAR.component },
+  { path: APP_ROUTES.CONTACT.url, component: APP_ROUTES.CONTACT.component },
+  { path: APP_ROUTES.PRICE.url, component: APP_ROUTES.PRICE.component },
+  {path: '**', redirectTo: APP_ROUTES.HOME.url },
 ];
 
 @NgModule({
@@ -24,4 +17,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[ContactComponent,BookinComponent,HomeComponent,LocationComponent,CalendarComponent,PricelistComponent,GalleryComponent]
+

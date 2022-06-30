@@ -1,20 +1,12 @@
 
 <div class="bg-image ">
     <div class="translate-button fixed-top">
-        <label for="">
-            {{'HOME.SELECT'|translate}}
-            <select  #langselect (change)="translate.use(langselect.value)">
-                <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{ lang }}</option>
-            </select>
-        </label>
+   
 </div>
     <div class="container">
          <app-mask-image></app-mask-image>
          <div class="container1">
         <app-navbar></app-navbar>
-       
-
-    
         </div>
             <router-outlet></router-outlet>
             <app-footer></app-footer>

@@ -1,18 +1,26 @@
-import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, OnInit } from '@angular/core';
 
+
+import { RouteModel } from './services/routes.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  constructor(public translate: TranslateService){
-    translate.addLangs(['en','de','hr']);
-    translate.setDefaultLang('en');
-    const browserLang = translate.getBrowserLang();
-    
-    translate.use(browserLang?.match(/en|de|hr/)? browserLang:'en');
+export class AppComponent implements OnInit {
+  /**
+   * Index of active route. Used to trigger the slide
+   * animation in the right direction.
+   */
+  public activeRouteIndex: number = 0;
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  public onRouteChange(event: {
+    activeRoute: RouteModel<unknown>;
+    index: number;
+  }) {
+    this.activeRouteIndex = event.index;
   }
-  
 }
