@@ -18,7 +18,7 @@
       #basicNav="mdbCollapse"
     >
       <ul class="navbar-nav">
-       <!-- <li class="nav-item">
+       <!-- <li class="nav-iteam">
           <a class="nav-link text-center active" aria-current="page" href="/bookin">Book now</a>
         </li>
       -->
@@ -38,6 +38,7 @@
           <a class="nav-link text-center" routerLink="/gallery"  [queryParams]="{ lang: currentLanguage | async }">Gallery</a>
         </li>
 
+        
           <button
     mat-menu-item
     *ngFor="let lang of appLanguages"

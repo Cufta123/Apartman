@@ -37,6 +37,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this._destroyed.complete();
     this.activeRouteChange.complete();
   }
+  
   private subscribeToRouteChanges() {
     this.router.events.pipe(takeUntil(this._destroyed)).subscribe((event) => {
       if (event instanceof RoutesRecognized) {

@@ -64,16 +64,16 @@
               Useful links
             </h6>
             <p>
-              <a href="/pricelist" class="text-reset">Pricing</a>
+              <a class="text-muted" routerLink="/pricelist"  [queryParams]="{ lang: currentLanguage | async }">Price</a>
             </p>
             <p>
-              <a href="/calendar" class="text-reset">Calendar</a>
+              <a  class="text-muted" routerLink="/calendar"  [queryParams]="{ lang: currentLanguage | async }">Calendar</a>
             </p>
             <p>
-              <a href="/about" class="text-reset">About us</a>
+              <a class="text-muted"  [routerLink]="['about']"  [queryParams]="{ lang: currentLanguage | async }">About us</a>
             </p>
             <p>
-              <a href="/contact" class="text-reset">Contact us</a>
+              <a class="text-muted"  routerLink="/contact"  [queryParams]="{ lang: currentLanguage | async }">Contact us</a>
             </p>
           </div>
           <!-- Grid column -->
