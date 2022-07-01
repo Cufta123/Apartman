@@ -1,7 +1,7 @@
 
 <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/home">Home</a>
+    <a class="navbar-brand" routerLink="/home"  [queryParams]="{ lang: currentLanguage | async }">Home</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -23,35 +23,42 @@
         </li>
       -->
         <li class="nav-item">
-          <a class="nav-link text-center" href="/about">About us</a>
+          <a class="nav-link text-center" [routerLink]="['about']"  [queryParams]="{ lang: currentLanguage | async }">About us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center" href="/contact">Contact us</a>
+          <a class="nav-link text-center" routerLink="/contact"  [queryParams]="{ lang: currentLanguage | async }">Contact us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center" href="/calendar">Calendar</a>
+          <a class="nav-link text-center" routerLink="/calendar"  [queryParams]="{ lang: currentLanguage | async }">Calendar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center" href="/pricelist">Price</a>
+          <a class="nav-link text-center" routerLink="/pricelist"  [queryParams]="{ lang: currentLanguage | async }">Price</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center" href="/gallery">Gallery</a>
+          <a class="nav-link text-center" routerLink="/gallery"  [queryParams]="{ lang: currentLanguage | async }">Gallery</a>
         </li>
+
+          <button
+    mat-menu-item
+    *ngFor="let lang of appLanguages"
+    (click)="changeLanguage(lang)"
+    [ngClass]="{
+      'mat-bg-primary-mid -color-primary-mid-contrast':
+        lang === (currentLanguage | async)
+    }"
+  >
+    {{ lang | uppercase }}
+  </button>
+  
       </ul>
       
     </div>
   </div>
 
-    <button
-      mat-menu-item
-      *ngFor="let lang of appLanguages"
-      (click)="changeLanguage(lang)"
-      [ngClass]="{
-        'mat-bg-primary-mid mat-color-primary-mid-contrast':
-          lang === (currentLanguage | async)
-      }"
-    >
-      {{ lang | uppercase }}
-    </button>
+
+
+
+
+  
 
 </nav>

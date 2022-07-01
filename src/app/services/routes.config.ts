@@ -2,11 +2,13 @@
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
 import { RouteModel } from '../services/routes.model';
 import { HomeComponent } from '../home/home.component';
+import { GalleryComponent } from '../gallery/gallery.component';
 import { BookinComponent } from '../bookin/bookin.component';
 import { CalendarComponent } from '../calendar/calendar.component';
 import { ContactComponent } from '../contact/contact.component';
 import { LocationComponent } from '../location/location.component';
 import { PricelistComponent } from '../pricelist/pricelist.component';
+
 
 type AppRouteType = {
   HOME: RouteModel<HomeComponent>;
@@ -15,6 +17,7 @@ type AppRouteType = {
   CALENDAR:RouteModel<CalendarComponent>;
   CONTACT:RouteModel<ContactComponent>;
   PRICE:RouteModel<PricelistComponent>;
+  GALLERY:RouteModel<GalleryComponent>;
 };
 
 export const APP_ROUTES: AppRouteType = {
@@ -50,11 +53,17 @@ export const APP_ROUTES: AppRouteType = {
     visibleInNavbar: true,
   },
   PRICE: {
-    url: 'price',
+    url: 'pricelist',
     title: marker('route.title.price'),
-    component: BookinComponent,
+    component: PricelistComponent,
     visibleInNavbar: true,
   },
+  GALLERY: {
+    url: 'gallery',
+    title: marker('route.title.gallery'),
+    component: GalleryComponent,
+    visibleInNavbar: true,
+  }
 
 
 

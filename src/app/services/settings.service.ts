@@ -17,7 +17,7 @@ export class SettingsService {
 
   private _currentLanguage: BehaviorSubject<AppLanguage> =
     new BehaviorSubject<AppLanguage>(DEFAULT_LANGUAGE);
-  private readonly _availableLanguages: AppLanguage[] = ['en', 'hr'];
+  private readonly _availableLanguages: AppLanguage[] = ['en', 'hr','de'];
 
   public get availableLanguages() {
     return this._availableLanguages;
@@ -58,6 +58,6 @@ export class SettingsService {
  
 }
 
-export const DEFAULT_LANGUAGE: AppLanguage = 'hr';
-export type AppLanguage = 'en' | 'hr';
+export const DEFAULT_LANGUAGE: AppLanguage = 'en';
+export type AppLanguage = 'de' | 'en'|'hr';
 export type AppTheme = 'dark-theme' | 'light-theme';

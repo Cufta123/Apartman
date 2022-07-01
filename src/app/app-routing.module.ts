@@ -9,7 +9,9 @@ const routes: Routes = [
   { path: APP_ROUTES.CALENDAR.url, component: APP_ROUTES.CALENDAR.component },
   { path: APP_ROUTES.CONTACT.url, component: APP_ROUTES.CONTACT.component },
   { path: APP_ROUTES.PRICE.url, component: APP_ROUTES.PRICE.component },
+  {path: APP_ROUTES.GALLERY.url, component: APP_ROUTES.GALLERY.component},
   {path: '**', redirectTo: APP_ROUTES.HOME.url },
+
 ];
 
 @NgModule({
