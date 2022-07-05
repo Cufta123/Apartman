@@ -38,9 +38,9 @@
           <a class="nav-link text-center" routerLink="/gallery"  [queryParams]="{ lang: currentLanguage | async }">Gallery</a>
         </li>
 
-        
           <button
     mat-menu-item
+    
     *ngFor="let lang of appLanguages"
     (click)="changeLanguage(lang)"
     [ngClass]="{
@@ -50,6 +50,7 @@
   >
     {{ lang | uppercase }}
   </button>
+  
   
       </ul>
       

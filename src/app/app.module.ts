@@ -80,6 +80,7 @@ export function HttpLoaderFactory(http: HttpClient){
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

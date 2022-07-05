@@ -1,21 +1,65 @@
-import { Component, OnInit } from '@angular/core';
+import {Component,EventEmitter,OnDestroy,OnInit,Output,} from '@angular/core';
+import { Router, RoutesRecognized } from '@angular/router';
+import { RouteModel } from 'src/app/services/routes.model';
+import {AppLanguage, AppTheme,SettingsService,} from 'src/app/services/settings.service';
+import { APP_ROUTES_ARR } from 'src/app/services/routes.config';
+import { Subject, takeUntil } from 'rxjs';
 
 
-import { RouteModel } from './services/routes.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  /**
-   * Index of active route. Used to trigger the slide
-   * animation in the right direction.
-   */
+export class AppComponent implements OnInit,OnDestroy {
+  @Output('activeRouteChange') activeRouteChange = new EventEmitter<{
+    activeRoute: RouteModel<unknown>;
+    index: number;
+  }>();
+  public readonly AppRoutes = APP_ROUTES_ARR;
   public activeRouteIndex: number = 0;
-  constructor() {}
+  public appLanguages = this.settingsService.availableLanguages;
+  public currentLanguage = this.settingsService.currentLanguage;
+  private _destroyed = new Subject();
 
-  ngOnInit(): void {}
+
+
+  constructor(
+    private settingsService: SettingsService,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    this.subscribeToRouteChanges();
+  }
+  ngOnDestroy(): void {
+    this._destroyed.next(null);
+    this._destroyed.complete();
+    this.activeRouteChange.complete();
+  }
+  private subscribeToRouteChanges() {
+    this.router.events.pipe(takeUntil(this._destroyed)).subscribe((event) => {
+      if (event instanceof RoutesRecognized) {
+        const urlWithoutQueryParams = this.router.parseUrl(
+          event.urlAfterRedirects
+        );
+        urlWithoutQueryParams.queryParams = {};
+        const i = this.findActiveRouteIndex(urlWithoutQueryParams.toString());
+        this.activeRouteIndex = i;
+        this.activeRouteChange.emit({
+          activeRoute: this.AppRoutes[i],
+          index: i,
+        });
+      }
+    });
+  }
+  private findActiveRouteIndex(url: string): number {
+    const activeRouteIndex = this.AppRoutes.findIndex((route) => {
+      return url.endsWith(`/${route.url}`);
+    });
+
+    return activeRouteIndex;
+  }
 
   public onRouteChange(event: {
     activeRoute: RouteModel<unknown>;
@@ -23,4 +67,8 @@ export class AppComponent implements OnInit {
   }) {
     this.activeRouteIndex = event.index;
   }
+  public changeLanguage(lang: AppLanguage) {
+    this.router.navigate([], { queryParams: { lang: lang } });
+  }
 }
+
