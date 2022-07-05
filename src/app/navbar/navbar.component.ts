@@ -2,7 +2,7 @@
 import {Component,EventEmitter,OnDestroy,OnInit,Output,} from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 import { RouteModel } from 'src/app/services/routes.model';
-import {AppLanguage, AppTheme,SettingsService,} from 'src/app/services/settings.service';
+import {AppLanguage,SettingsService,} from 'src/app/services/settings.service';
 import { APP_ROUTES_ARR } from 'src/app/services/routes.config';
 import { Subject, takeUntil } from 'rxjs';
 @Component({
@@ -11,6 +11,11 @@ import { Subject, takeUntil } from 'rxjs';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit, OnDestroy {
+/**
+   * Emit an event when the route has changed.
+   * The route index will be used to trigger the slide animation
+   * in the right direction.
+   */
   @Output('activeRouteChange') activeRouteChange = new EventEmitter<{
     activeRoute: RouteModel<unknown>;
     index: number;
@@ -66,5 +71,3 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.router.navigate([], { queryParams: { lang: lang } });
   }
 }
-
-

@@ -37,30 +37,50 @@
         <li class="nav-item">
           <a class="nav-link text-center" routerLink="/gallery"  [queryParams]="{ lang: currentLanguage | async }">Gallery</a>
         </li>
-
-          <button
-    mat-menu-item
-    
-    *ngFor="let lang of appLanguages"
-    (click)="changeLanguage(lang)"
-    [ngClass]="{
-      'mat-bg-primary-mid -color-primary-mid-contrast':
-        lang === (currentLanguage | async)
-    }"
-  >
-    {{ lang | uppercase }}
-  </button>
-  
-  
       </ul>
       
     </div>
+    <div class="d-flex align-items-center">
+      <span class="never-hide">
+        <!-- Right side of the toolbar -->
+        <div *ngTemplateOutlet="appSettingsTemplate"></div>
+      </span>
+      <ng-template #routeLinksTemplate>
+        <ng-container *ngFor="let route of AppRoutes; let i = index">
+          <a
+            mat-button
+            *ngIf="route.visibleInNavbar"
+            [routerLink]="['/' + route.url]"
+            [ngClass]="{
+              'mat-bg-primary-mid mat-color-primary-mid-contrast':
+                i === activeRouteIndex
+            }"
+            [queryParams]="{ lang: currentLanguage | async }"
+            [queryParamsHandling]="'merge'"
+          >
+            {{ route.title | translate }}
+          </a>
+        </ng-container>
+      </ng-template>
+      
+      <ng-template #appSettingsTemplate>
+        <button mat-button [matMenuTriggerFor]="langMenu">
+          {{ currentLanguage | async | uppercase }}
+        </button>
+        <mat-menu #langMenu="matMenu">
+          <button
+            mat-menu-item
+            *ngFor="let lang of appLanguages"
+            (click)="changeLanguage(lang)"
+            [ngClass]="{
+              'mat-bg-primary-mid mat-color-primary-mid-contrast':
+                lang === (currentLanguage | async)
+            }"
+          >
+            {{ lang | uppercase }}
+          </button>
+        </mat-menu>
+      </ng-template>
+    </div>
   </div>
-
-
-
-
-
-  
-
 </nav>

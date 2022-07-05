@@ -1,19 +1,7 @@
 
 
 <div class="bg-image ">
-    <div class="jezik">
-        <button
-        mat-menu-item
-        *ngFor="let lang of appLanguages"
-        (click)="changeLanguage(lang)"
-        [ngClass]="{
-          'mat-bg-primary-mid -color-primary-mid-contrast':
-            lang === (currentLanguage | async)
-        }"
-      >
-        {{ lang | uppercase }}
-      </button>
-    </div>
+    
     <div class="container">
         
          <app-mask-image></app-mask-image>

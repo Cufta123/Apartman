@@ -1,7 +1,7 @@
 .bg-image{
     background-image: url(../assets/Images/Volosko.jpeg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     
     
@@ -26,6 +26,11 @@ min-height: 100vh;
         margin: 0;
     }
 }
-.jezik{
-  position: fixed;
+#jezik{
+ 
+  position: top;
+  z-index: 1;
+}
+#mask-image{
+    z-index: 2;
 }
