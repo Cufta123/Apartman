@@ -29,10 +29,10 @@ import { DEFAULT_LANGUAGE} from './services/settings.service';
 import { HomeComponent } from './home/home.component';
 import { LocationComponent } from './location/location.component';
 import{SharedModule} from'./services/shared.module';
-import {MatIcon, MatIconModule} from '@angular/material/icon';
+import {MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { LocationModule } from './location/location.module';
-import { importExpr } from '@angular/compiler/src/output/output_ast';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatMenuModule} from '@angular/material/menu';
 
