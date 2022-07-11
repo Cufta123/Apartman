@@ -1,8 +1,26 @@
+img{
+    max-width: 100%;
+}
+
 .container{
     padding: 2%;
     margin: 0;
 }
 
-.podnaslov{
-    text-align: center;
+.gallery{
+    padding: 80px 0;
+}
+
+.gallery img{
+    transition: 0.5s;
+    background-color: #ffffff;
+    padding: 15px;
+    width:100%;
+    box-shadow: 0 0 10px rgb(92, 91, 91);
+
+}
+
+.gallery img:hover{
+   filter: grayscale(10%);
+   
 }

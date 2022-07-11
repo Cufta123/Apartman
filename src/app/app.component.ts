@@ -1,7 +1,7 @@
 import {Component,EventEmitter,OnDestroy,OnInit,Output,} from '@angular/core';
 import { Router, RoutesRecognized } from '@angular/router';
 import { RouteModel } from 'src/app/services/routes.model';
-import {AppLanguage, AppTheme,SettingsService,} from 'src/app/services/settings.service';
+import {AppLanguage,SettingsService,} from 'src/app/services/settings.service';
 import { APP_ROUTES_ARR } from 'src/app/services/routes.config';
 import { Subject, takeUntil } from 'rxjs';
 

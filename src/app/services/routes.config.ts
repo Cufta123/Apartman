@@ -16,7 +16,7 @@ type AppRouteType = {
   BOOKING: RouteModel<BookinComponent>;
   CALENDAR:RouteModel<CalendarComponent>;
   CONTACT:RouteModel<ContactComponent>;
-  PRICE:RouteModel<PricelistComponent>;
+  PRICELIST:RouteModel<PricelistComponent>;
   GALLERY:RouteModel<GalleryComponent>;
 };
 
@@ -52,9 +52,9 @@ export const APP_ROUTES: AppRouteType = {
     component: ContactComponent,
     visibleInNavbar: true,
   },
-  PRICE: {
+  PRICELIST: {
     url: 'pricelist',
-    title: marker('route.title.price'),
+    title: marker('route.title.pricelist'),
     component: PricelistComponent,
     visibleInNavbar: true,
   },

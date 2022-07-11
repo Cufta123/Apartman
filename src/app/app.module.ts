@@ -32,9 +32,11 @@ import{SharedModule} from'./services/shared.module';
 import {MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { LocationModule } from './location/location.module';
-
+import { TranslatePipe } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatMenuModule} from '@angular/material/menu';
+import { PricelistComponent } from './pricelist/pricelist.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -50,10 +52,12 @@ export function HttpLoaderFactory(http: HttpClient){
     FooterComponent,
     HomeComponent,
     LocationComponent,
-    
+    PricelistComponent,
+    ContactComponent,
   ],
   imports: [
     MatToolbarModule,
+    
     BrowserModule,
     HttpClientModule,
     SharedModule,

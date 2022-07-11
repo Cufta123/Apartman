@@ -1,15 +1,20 @@
 {"HOME":{
-    "TITLE":"Apartman luksic",
+    "TITLE":"Apartman Lukšić",
     "SELECT":"Select Language",
     "TITLE1":"Contenuto dell'appartamento",
-    "TEXT1":"L'appartamento della famiglia Luksic si trova nel centro della cittadina costiera di Volosko. Volosko si trova in riva al mare, a 1,5 km da Opatija, e ha conservato lo spirito di un antico villaggio di pescatori, con numerosi ristoranti, caffè e gallerie d'arte. Stradine ripide e strette conducono al pittoresco porto lungo il quale scorre il lungomare.",
+    "TEXT1":"L'appartamento della famiglia Lukšić si trova nel centro della cittadina costiera di Volosko. Volosko si trova in riva al mare, a 1,5 km da Opatija, e ha conservato lo spirito di un antico villaggio di pescatori, con numerosi ristoranti, caffè e gallerie d'arte. Stradine ripide e strette conducono al pittoresco porto lungo il quale scorre il lungomare.",
     "TEXT2":"L'appartamento si trova al 1° piano di una casa nel centro di Volosko. Si compone di una cucina con zona pranzo, soggiorno con due letti aggiunti, due camere matrimoniali e un bagno per una superficie totale di 65 m2. Tutte le camere sono dotate di aria condizionata. L'appartamento è dotato di lavastoviglie, lavatrice, forno a microonde e cucina con tutti gli elementi necessari, utensili e posate. L'appartamento ha un ingresso separato e un balcone esposto a sud-est. La distanza dal mare è di circa 80 m in linea d'aria. Proprio accanto alla casa c'è un negozio, l'ufficio postale si trova a 150 m, un panificio a 100 m e tutti gli altri servizi si trovano nelle vicinanze.",
     "TITLE3":"Volosko",
     "TEXT3":"Volosko è una piccola e attraente cittadina di pescatori e turistica sulla riviera di Opatija, a circa 1 chilometro dal centro di Opatija. Volosko è particolarmente attraente per gli amanti della cucina costiera appassionati di windsurf. La pittoresca Mandrac e le sue spiagge rocciose, i ristoranti dei pescatori, la passeggiata in riva al mare e la pace che regna in città, perché non si trova sulla strada principale, sulla strada Rijeka-Opatija, sono un'esca e una delle preferite dai turisti in cerca di pace luogo di incontro di artisti. Fu menzionato per la prima volta nel 1543 e in passato riceveva navi di tutte le dimensioni e svolgeva il ruolo di porto di Kastava.",
     "TITLE4":"Dove siamo/Cosa fare",
     "TEXT4":"Volosko si trova vicino a Opatija, nel Golfo del Quarnero (45o 20'), dove il Mediterraneo è nel suo punto più profondo. tagliato nella terra dell'Europa centrale ai piedi del monte Učka (1.401 m). Riparato dai forti venti dalle isole e da Ucka è facilmente accessibile in tutte le stagioni. Clima - clima mediterraneo mite con inverni miti ed estati tollerabili. Flusso d'aria costante, aerosol marino. La temperatura media dell'aria estiva è di 21,9°C e quella invernale di 7°C. La temperatura del mare sale a 26°C in estate. Insolazione annuale 2000 ore.",
     "TITLE5":"Distanze verso destinazioni interessanti:",
-    "TITLEPRICE":"Listino prezzi"
+    "TITLEPRICE":"Listino prezzi",
+    "PRICERESERVATION":"Prenotazione",
+    "PRICETEXT":"La prenotazione (dalla Croazia) viene confermata versando il 30% del valore sul conto Private Bank:",
+    "PRICETEXT1":"IBAN: HR4123400093209324322",
+    "PRICETEXT2":"(indicare il proprio JMBG o OIB quando si chiama il numero) Il resto viene pagato all'arrivo.",
+    "CONTACTTITLE":"Contattaci e prenota subito!"
 }
 
 

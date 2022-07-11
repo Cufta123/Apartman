@@ -1,14 +1,19 @@
 {"HOME":{
-    "TITLE":"Apartman luksic",
+    "TITLE":"Apartman Lukšić",
     "SELECT":"Izaberite jezik",
-    "TITLE1":"Sadrzaj apartmana",
-    "TEXT1":"Apartman obitelji Luksic nalazi se u centru malog primorskog gradića Volosko. Volosko se nalazi uz more, 1,5 km udaljen od Opatije, i zadržao je duh starog ribarskog mjesta, s brojnim restoranima, kafićima i umjetničkim galerijama. Strmim i uskim uličicama stiže se do slikovite luke uz koju kreće šetnica.",
+    "TITLE1":"Sadržaj apartmana",
+    "TEXT1":"Apartman obitelji Lukšić nalazi se u centru malog primorskog gradića Volosko. Volosko se nalazi uz more, 1,5 km udaljen od Opatije, i zadržao je duh starog ribarskog mjesta, s brojnim restoranima, kafićima i umjetničkim galerijama. Strmim i uskim uličicama stiže se do slikovite luke uz koju kreće šetnica.",
     "TEXT2":" Apartman se nalazi na 1. katu u kuće u samom centru Voloskog. Sastoji se od kuhinje s blagovaonicom, dnevnog boravka s dva pomoćna ležaja, dvije dvokrevetne spavaće sobe i kupaonice ukupne površine 65 m2. Sve prostorije su klimatizirane. Apartman ima mašinu za suđe, mašinu za robu, mikrovalnu pećnicu, te kuhinju sa svim potrebnim elementima, posuđem i priborom za jelo. Apartman ima poseban ulaz i balkon koji gleda prema jugoistoku. Udaljenost od mora je cca 80 m zračne linije. Odmah do kuće nalazi se dućan, pošta je udaljena 150 m, pekarnica je na 100m i svi ostali sadržaji su u blizini. ",
     "TITLE3":"Volosko",
     "TEXT3":"Volosko je maleno privlačno ribarsko i turističko mjestašce na opatijskoj rivijeri udaljeno oko 1 kilometar od središta Opatije. Volosko je osobito privlačno ljubiteljima primorske kuhinje i ljubiteljima windsurfinga. Slikoviti mandrać i njegove stjenovite plaže, ribarski restorani, šetalište uz more i mir koji vlada u gradiću, jer ne leži na glavnom putu Rijeka-Opatija, mamac su izletnicima željnima mira i omiljeno sastajalište umjetnika. Prvi puta spominje se još 1543. a u prošlosti je primao brodove svih veličina i imao ulogu luke grada Kastva.",
     "TITLE4":"Gdje smo / Što raditi",
     "TEXT4":"Volosko je smješteno kraj Opatije, u Kvarnerskom zaljevu  (45o 20') u kojem se Mediteran najdublje usjekao u kopno Srednje Europe u podnožju planine Učka (1.401 m). Zaklonjeno od jakih vjetrova otocima i Učkom  lako je dostupna u sva godišnja doba. Klima - umjerena mediteranska klima s blagim zimama i podnošljivim ljetima. Stalno strujanje zraka, morskog aersola. Prosječna ljetna temperatura zraka iznosi 21,9o C, a zimska 7o C. Temperatura mora ljeti se penje do 26o C. Godišnja insolacija  2000 sati.",
     "TITLE5":"Udaljenosti do zanimljivih destinacija:",
-    "TITLEPRICE":"Cjenik"
+    "TITLEPRICE":"Cjenik",
+    "PRICERESERVATION":"Rezervacija",
+    "PRICETEXT":"Rezervacija (iz Hrvatske) se potvrđuje uplatom 30% vrijednosti na racun Private banke:",
+    "PRICETEXT1":"IBAN: HR4123400093209324322",
+    "PRICETEXT2":"(u poziv na broj navesti svoj JMBG ili OIB) Ostatak se plaća pri dolasku.",
+    "CONTACTTITLE":"Kontaktirajte nas i rezervirajte sada!"
     }
 }
